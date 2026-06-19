@@ -10,7 +10,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🏥 NHS Prescribing — Overspending Predictor")
+st.title("🏥 NHS Prescribing - Overspending Predictor Model")
 st.markdown("---")
 
 st.markdown("""
@@ -24,9 +24,9 @@ ITEMS, TOTAL_QUANTITY, ADQ_USAGE, NIC, ACTUAL_COST, MONTH, QUARTER`
 # Load model and encoders
 @st.cache_resource
 def load_model():
-    model = joblib.load("rf_model.pkl")
-    le_icb = joblib.load("le_icb.pkl")
-    le_bnf = joblib.load("le_bnf.pkl")
+    model = joblib.load("NHS_Model/rf_model.pkl")
+    le_icb = joblib.load("NHS_Model/le_icb.pkl")
+    le_bnf = joblib.load("NHS_Model/le_bnf.pkl")
     return model, le_icb, le_bnf
 
 model, le_icb, le_bnf = load_model()
