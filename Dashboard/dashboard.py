@@ -14,10 +14,10 @@ st.set_page_config(
 )
 
 # Data path
-DATA = "data/"
+DATA = "Dashboard/data/"
 
 # Load GeoJSON
-GEOJSON_PATH = "Integrated_Care_Boards_April_2023_EN_BGC_4724716452693616968.geojson"
+GEOJSON_PATH = "Dashboard/Integrated_Care_Boards_April_2023_EN_BGC_4724716452693616968.geojson"
 with open(GEOJSON_PATH, 'r') as f:
     geojson = json.load(f)
 
@@ -58,7 +58,7 @@ def animated_metric(label, value, col):
 
 # Sidebar navigation
 st.sidebar.image(
-    "nhs_logo.png.png",
+    "Dashboard/nhs_logo.png.png",
     width=150
 )
 
