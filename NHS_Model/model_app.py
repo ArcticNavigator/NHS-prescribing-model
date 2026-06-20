@@ -262,7 +262,7 @@ if st.session_state.results_ready:
                f"→  {len(grouped):,} practice-category-month combinations for the model.")
 
     st.markdown("---")
-    st.subheader(f"Results — {len(at_risk_practices)} At-Risk Practices Found")
+    st.subheader(f"Results - {len(at_risk_practices)} At-Risk Practices Found")
 
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Practices", f"{len(practice_summary):,}")
