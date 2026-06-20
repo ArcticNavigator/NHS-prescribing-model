@@ -286,8 +286,8 @@ if st.session_state.results_ready:
                     'ICB_NAME': 'ICB', 'total_actual': 'Actual Cost (£)',
                     'total_predicted': 'Predicted Cost (£)'}
         )
-        fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
-        fig.update_layout(height=800, coloraxis_showscale=False)
+        fig.update_traces(texttemplate='%{text:.1f}%', textposition='auto')
+        fig.update_layout(height=850, coloraxis_showscale=False)
         st.plotly_chart(fig, use_container_width=True)
     else:
         st.success("No at-risk practices found in this dataset.")
