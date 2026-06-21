@@ -1,6 +1,6 @@
-# NHS Prescribing Overspending Predictor — Random Forest Machine Learning App (2025)
+# NHS Prescribing Overspending Predictor - Random Forest Machine Learning App (2025)
 
-**A live machine learning app that predicts which GP practices will overspend on NHS prescribing. Upload a real NHS prescribing file and get back a ranked list of at-risk practices — built with a Random Forest model that is 95.4% accurate.**
+**A live machine learning app that predicts which GP practices will overspend on NHS prescribing. Upload a real NHS prescribing file and get back a ranked list of at-risk practices built with a Random Forest model that is 95.4% accurate.**
 
 [![Live Model App](https://img.shields.io/badge/▶%20Try%20the%20Live%20App-7B68EE?style=for-the-badge)](https://nhs-prescribing-model-ah5jesmyr8b6y6gbeqzah5.streamlit.app)
 [![scikit-learn](https://img.shields.io/badge/Random%20Forest-scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
@@ -22,7 +22,7 @@ This is a machine learning web app that acts as an **early warning tool for NHS 
 
 You upload a raw monthly prescribing file from the NHS Business Services Authority (NHSBSA) Open Data Portal. The app does everything else:
 
-1. **Cleans the raw data** automatically — the same cleaning pipeline used to train the model.
+1. **Cleans the raw data** automatically (the same cleaning pipeline used to train the model).
 2. **Groups it** by practice, drug category and month.
 3. **Predicts the expected cost** for each practice using a trained Random Forest model.
 4. **Flags at-risk practices** where actual spending is more than 20% above what the model predicted.
@@ -35,12 +35,12 @@ You upload a raw monthly prescribing file from the NHS Business Services Authori
 - **Random Forest Regressor** trained on NHS EPD SNOMED 2025 data.
 - **95.4% accuracy (R² = 0.954)** on held-out November–December test data.
 - Beats a Linear Regression baseline (R² = 0.55) by 40 percentage points, because prescribing cost is driven by non-linear interactions between drug category, volume and pricing.
-- Cross-validated (5-fold) with a mean R² of 0.966 and a standard deviation of just 0.0006 — the model is stable across different data splits.
+- Cross-validated (5-fold) with a mean R² of 0.966 and a standard deviation of just 0.0006, the model is stable across different data splits.
 - Identified **2,417 at-risk GP practices** in the test period.
 
 ### What drives the predictions
 
-The single biggest predictor is **prescription volume (ITEMS, 61%)**, followed by **drug category (16%)**. Together they explain 77% of all cost variation. Geographic location adds less than 1% — confirming that prescribing cost depends on *what* is prescribed, not *where*.
+The single biggest predictor is **prescription volume (ITEMS, 61%)**, followed by **drug category (16%)**. Together they explain 77% of all cost variation. Geographic location adds less than 1% confirming that prescribing cost depends on *what* is prescribed, not *where*.
 
 ---
 
@@ -58,12 +58,12 @@ The single biggest predictor is **prescription volume (ITEMS, 61%)**, followed b
 
 ## Tech stack
 
-- **scikit-learn** — Random Forest model and label encoders
-- **Streamlit** — the web app
-- **pandas** — data cleaning and aggregation
-- **Plotly** — the at-risk practices chart
-- **joblib** — saving and loading the trained model
-- **Streamlit Community Cloud** — hosting
+- **scikit-learn** - Random Forest model and label encoders
+- **Streamlit** - the web app
+- **pandas** - data cleaning and aggregation
+- **Plotly** - the at-risk practices chart
+- **joblib** - saving and loading the trained model
+- **Streamlit Community Cloud** - hosting
 
 ---
 
@@ -102,7 +102,7 @@ streamlit run model_app.py
 
 ## Data source
 
-English Prescribing Dataset (EPD) with SNOMED code — NHS Business Services Authority Open Data Portal: https://opendata.nhsbsa.net/dataset/english-prescribing-dataset-epd-with-snomed-code
+English Prescribing Dataset (EPD) with SNOMED code - NHS Business Services Authority Open Data Portal: https://opendata.nhsbsa.net/dataset/english-prescribing-dataset-epd-with-snomed-code
 
 ---
 
